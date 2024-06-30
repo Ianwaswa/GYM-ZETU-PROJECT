@@ -231,43 +231,88 @@ footer {
     border: 1px solid #888;
     width: 80%;
     max-width: 500px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-.close {
+.modal-content h2 {
+    margin-bottom: 20px;
+}
+
+.modal-content .close {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.modal-content .close:hover,
+.modal-content .close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
 }
 
-form {
+.modal-content form {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-form label, form input, form button {
-    margin-bottom: 10px;
+.modal-content form label {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 5px;
 }
 
-form input {
-    padding: 8px;
+.modal-content form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     font-size: 1rem;
 }
 
-form button {
+.modal-content form button {
     background: #a51b51;
     color: #fff;
     border: none;
-    padding: 10px;
+    padding: 10px 20px;
     cursor: pointer;
     font-size: 1rem;
+    transition: background 0.3s;
+    border-radius: 5px;
+}
+
+.modal-content form button:hover {
+    background: #7e143a;
+}
+
+.auth-modal-content .auth-buttons-modal {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.auth-modal-content .auth-buttons-modal button {
+    flex: 1;
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.auth-modal-content .auth-buttons-modal .create-account {
+    background: #4CAF50;
+}
+
+.auth-modal-content .auth-buttons-modal .login {
+    background: #008CBA;
+}
+
+.auth-modal-content .auth-buttons-modal button:hover {
+    background: #333;
 }
 
 /* Responsive Styles */
