@@ -11,11 +11,15 @@ function closeModal(modalId) {
 window.onclick = function(event) {
     const createAccountModal = document.getElementById('createAccountModal');
     const loginModal = document.getElementById('loginModal');
+    const authModal = document.getElementById('authModal');
     if (event.target == createAccountModal) {
         createAccountModal.style.display = "none";
     }
     if (event.target == loginModal) {
         loginModal.style.display = "none";
+    }
+    if (event.target == authModal) {
+        authModal.style.display = "none";
     }
 }
 
@@ -31,4 +35,8 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     // Add your login logic here
     alert('Logged in successfully!');
     closeModal('loginModal');
+});
+
+document.querySelector('.join-gym').addEventListener('click', function() {
+    openModal('authModal');
 });
