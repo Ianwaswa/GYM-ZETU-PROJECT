@@ -56,7 +56,6 @@ nav ul li a:hover {
 
 .auth-buttons .create-account {
     background: #4CAF50;
-    font-style: roboto;
 }
 
 .auth-buttons .login {
@@ -119,31 +118,51 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 15px;
 }
 
 .feature {
-    flex: 1;
+    text-align: center;
+    flex: 1 1 200px;
+    margin: 10px;
+}
+
+.feature img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.plans {
     padding: 20px;
     text-align: center;
 }
 
-.feature img {
-    width: 50px;
-    margin-bottom: 10px;
-}
-
-.plans, .app, .reviews {
-    padding: 20px;
-    text-align: left;
-}
-
-.plans h2, .app h2, .reviews h2 {
+.plans h2 {
     margin-bottom: 20px;
     font-size: 2rem;
 }
 
-.download-app {
+.app {
+    background: url('app-image.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: left;
+}
+
+.app-text {
+    max-width: 600px;
+}
+
+.app-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.app-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.app-text .download-app {
     background: #a51b51;
     color: #fff;
     border: none;
@@ -153,15 +172,39 @@ nav ul li a:hover {
     transition: background 0.3s;
 }
 
-.download-app:hover {
+.app-text .download-app:hover {
     background: #7e143a;
+}
+
+.reviews {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reviews h2 {
+    font-size: 2rem;
+    flex: 1;
+}
+
+.review-text {
+    flex: 2;
+}
+
+.review-text blockquote {
+    background: #f9f9f9;
+    padding: 10px;
+    border-left: 5px solid #ccc;
+    margin: 10px 0;
+    font-style: italic;
 }
 
 footer {
     background: #333;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px;
     position: relative;
     bottom: 0;
     width: 100%;
@@ -243,5 +286,10 @@ form button {
 
     .feature {
         margin-bottom: 20px;
+    }
+
+    .reviews {
+        flex-direction: column;
+        text-align: center;
     }
 }

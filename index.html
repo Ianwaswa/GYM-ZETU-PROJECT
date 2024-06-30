@@ -28,7 +28,7 @@
         <div class="hero-text">
             <h1>Train, enjoy and live the experience</h1>
             <p>Make fitness a staple in your life. Enjoy a comforting cardio session, a collective class or our state-of-the-art fitness equipment. No matter how you train, the doors of Altea are open to you.</p>
-            <button class="join-gym">Join Altea Gym</button>
+            <button class="join-gym" onclick="openModal('authModal')">Join Altea Gym</button>
         </div>
     </section>
 
@@ -69,13 +69,15 @@
     </section>
 
     <section class="app">
-        <h2>Get Fit in Any Time and Place</h2>
-        <p>Feel and stay fit with the new Altea App. Your new (mobile) sports partner with which you can focus on your fitness goals anytime, anywhere. The app has a lot of features and is completely free to download for Altea members.</p>
-        <button class="download-app">Download the App</button>
+        <div class="app-text">
+            <h2>Get Fit in Any Time and Place</h2>
+            <p>Feel and stay fit with the new Altea App. Your new (mobile) sports partner with which you can focus on your fitness goals anytime, anywhere. The app has a lot of features and is completely free to download for Altea members.</p>
+            <button class="download-app">Download the App</button>
+        </div>
     </section>
 
     <section class="reviews">
-        <h2>Altea Reviews</h2>
+        <h2>ALTEA REVIEWS</h2>
         <div class="review-text">
             <blockquote>
                 "Attentive and friendly staff. I love training there daily."
@@ -118,6 +120,17 @@
                 <input type="password" id="loginPassword" name="loginPassword" required>
                 <button type="submit">Log In</button>
             </form>
+        </div>
+    </div>
+
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('authModal')">&times;</span>
+            <h2>Join Altea Gym</h2>
+            <div class="auth-buttons-modal">
+                <button class="create-account" onclick="openModal('createAccountModal'); closeModal('authModal');">Create account</button>
+                <button class="login" onclick="openModal('loginModal'); closeModal('authModal');">Log in</button>
+            </div>
         </div>
     </div>
 
