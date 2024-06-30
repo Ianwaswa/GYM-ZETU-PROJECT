@@ -56,6 +56,7 @@ nav ul li a:hover {
 
 .auth-buttons .create-account {
     background: #4CAF50;
+    font: roboto;
 }
 
 .auth-buttons .login {
